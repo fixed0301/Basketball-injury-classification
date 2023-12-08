@@ -3,10 +3,10 @@ import cv2
 import mediapipe as mp
 import pandas as pd
 
-data_folder = 'C:\\Users\\USER\Documents\GitHub\Basketball-injury-classification\AI창의융합경진대회\video_dataset'
+data_folder = '../dataset/video_dataset'
 
 def csv(df, output_name):
-    df.to_csv('C:\\Users\\USER\Documents\GitHub\Basketball-injury-classification\AI창의융합경진대회\csv_dataset/'+ output_name +'.csv', index=False)
+    df.to_csv('../dataset/csv_dataset/'+ output_name +'.csv', index=False)
 
 def create_df(video_name):
     video_path = os.path.join(data_folder, video_name)
@@ -74,7 +74,7 @@ def create_df(video_name):
     return
 
 
-# Draw the pose annotation on the image.
+# 이미지 위에 포즈 그리기.
 # image.flags.writeable = True
 # image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
 # mp_drawing.draw_landmarks(
